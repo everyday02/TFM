@@ -280,24 +280,94 @@ th {
 /*！
  *  全局公共的基本样式
  * */
-/* line 5, ../sass/_base.scss */
+/* line 6, ../sass/_base.scss */
 body, html {
   font-family: "微软雅黑";
+}
+
+/*
+ * a标签
+ * */
+/* line 14, ../sass/_base.scss */
+a {
+  color: inherit;
+  text-decoration: inherit;
+  cursor: inherit;
+}
+/* line 18, ../sass/_base.scss */
+a:focus {
+  text-decoration: inherit;
+  cursor: inherit;
+}
+/* line 22, ../sass/_base.scss */
+a:link {
+  text-decoration: inherit;
+  cursor: inherit;
 }
 
 /**
  * 字体  & 文本内容 
  */
-/* line 14, ../sass/_base.scss */
+/* line 32, ../sass/_base.scss */
 h5 {
   font-weight: 700;
 }
 
-/* line 18, ../sass/_base.scss */
+/* line 36, ../sass/_base.scss */
 .text-ellipsis {
   white-space: nowrap;
   overflow: hidden;
   -ms-text-overflow: ellipsis;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
+}
+
+/* line 40, ../sass/_base.scss */
+.red01 {
+  color: #f30;
+}
+
+/**
+ * 动画定义    
+ */
+/* line 7, ../sass/_animated.scss */
+.animated {
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    /*-webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);*/
+    -webkit-transform: translate3d(0, 50px, 0);
+    transform: translate3d(0, 50px, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    /*-webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);*/
+    -webkit-transform: translate3d(0, 50px, 0);
+    transform: translate3d(0, 50px, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+/* line 47, ../sass/_animated.scss */
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
 }

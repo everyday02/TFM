@@ -2,10 +2,28 @@
 /*！
  *  全局公共的基本样式
  * */
+
 body,html{
 	font-family: $font-family;
 }
 
+
+/*
+ * a标签
+ * */
+a{
+    color: inherit;
+    text-decoration: inherit;
+    cursor: inherit;
+    &:focus{
+        text-decoration: inherit;
+        cursor: inherit;
+    }
+     &:link{
+        text-decoration: inherit;
+        cursor: inherit;
+    }   
+}
 
 
 /**
@@ -17,4 +35,8 @@ h5{
 
 .text-ellipsis{
     @include ellipsis;
+}
+
+.red01{
+    color:$color-red01;
 }

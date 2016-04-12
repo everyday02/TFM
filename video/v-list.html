@@ -2,39 +2,19 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>分享视频</title>
-		<script type="text/javascript" src="../js/jquery/jquery.min.js"></script>
-		<script type="text/javascript" src="../js/bootStrap3/js/bootstrap.min.js"></script>
-		<link  rel="stylesheet" href="../js/bootStrap3/css/bootstrap.css" />
+		<title>云盘分享</title>
+		<link  rel="stylesheet" href="../js/bootStrap3/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="../css/stylesheets/screen.css" />
 		<link rel="stylesheet" href="../css/stylesheets/video/video.css" />
+		<script type="text/javascript" src="../js/jquery/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/bootStrap3/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../js/vue/vue.dev.js"></script>
+		<script type="text/javascript" src="../js/vue/vue-router.min.js"></script>
+		<script type="text/javascript" src="../common/base.js"></script>		
+		<script type="text/javascript" src="../common/router.js"></script>
 	</head>
 	<body >
-	<div class="navbar navbar-inverse " style="border-radius:0px;">
-      <div class="container">
-		<div class="navbar-header">
-          <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand hidden-sm" >IT@家</a>
-        </div>      	
-        <div class="navbar-collapse collapse" role="navigation">
-          <ul class="nav navbar-nav">
-            <li><a href="javascript:void(0);" >视&nbsp;频</a></li>
-            <li><a href="javascript:void(0);">书&nbsp;籍</a></li>
-            <li><a href="javascript:void(0);">文&nbsp;章</a></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right hidden-sm">
-            <li><a href="javascript:void(0);" >登陆</a></li>
-             <li><a >注册</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
+    {{{head}}}
 	<div class="video-search-content container">
 		<div class="v-search-title" >
 			<span>全部视频</span>
@@ -83,13 +63,11 @@
 			<div class="v-list-top-tool">
 				<div class="container">
 					<ul class="bc-social-buttons">
-						<li class="social-qq col-xs-12 col-sm-1">
+						<li class="quick-order on">
 							<i class="fa fa-qq"></i>最新 <span id="qqgroup"></span>
 						</li>
-						<li class="social-forum">
-							<a class="" href="http://wenda.bootcss.com" >
-								<i class="fa fa-comments"></i> 最热
-							</a>
+						<li class="quick-order">
+								<i class="fa fa-comments"></i> 最热<span id="qqgroup"></span>
 						</li>
 					</ul>
 				</div>
@@ -99,68 +77,126 @@
 	
 	<div class="video-list-content container">
 		<div class="row">
-			<div class="col-xs-12 col-sm-3 video-item">
-				<a href="images/work_1.jpg" class="fh5co-project-item image-popup to-animate fadeInUp animated">
+			<div class="col-xs-12 col-sm-3 video-item animated fadeInUp">
+				<a href="v-detail.html" class="fh5co-project-item image-popup to-animate fadeInUp animated">
 					<img src="../img/video/01.png" alt="Image" class="img-video">
 					<div class="video-text">
 						<h5 class="text-ellipsis">Cocos Creator教学系列</h5>
 						<p class="text-ellipsis">Cocos Creator官方教学视频。</p>
 						<div class="video-message">
-							<span class="cf30">735</span>人气 /  
-							<span class="cf30">14</span>评论 / 
-							<span class="cf30">1 </span>收藏  
+							<span class="red01">735</span>人气 /  
+							<span class="red01">14</span>评论 / 
+							<span class="red01">1 </span>收藏  
 						</div>
 					</div>
 				</a>
 			</div>
 		
-			<div class="col-xs-12 col-sm-3 video-item">
-				<a href="images/work_1.jpg" class="fh5co-project-item image-popup to-animate fadeInUp animated">
+			<div class="col-xs-12 col-sm-3 video-item animated fadeInUp">
+				<a href="v-detail.html" class="fh5co-project-item image-popup to-animate fadeInUp animated">
 					<img src="../img/video/02.jpg" alt="Image" class="img-video">
 					<div class="video-text">
 						<h5 class="text-ellipsis">进击Node.js基础（二）</h5>
 						<p class="text-ellipsis">"键盘侠"带你继续攻破 Nodejs !</p>
 						<div class="video-message">
-							<span class="cf30">735</span>人气 /  
-							<span class="cf30">14</span>评论 / 
-							<span class="cf30">1 </span>收藏  
+							<span class="red01">735</span>人气 /  
+							<span class="red01">14</span>评论 / 
+							<span class="red01">1 </span>收藏  
 						</div>
 					</div>
 				</a>
 			</div>
 		
-			<div class="col-xs-12 col-sm-3 video-item">
-				<a href="images/work_1.jpg" class="fh5co-project-item image-popup to-animate fadeInUp animated">
+			<div class="col-xs-12 col-sm-3 video-item animated fadeInUp">
+				<a href="v-detail.html" class="fh5co-project-item image-popup to-animate fadeInUp animated">
 					<img src="../img/video/03.jpg" alt="Image" class="img-video">
 					<div class="video-text">
 						<h5 class="text-ellipsis" >Cocos Creator教学系列</h5>
 						<p class="text-ellipsis">Cocos Creator官方教学视频。</p>
 						<div class="video-message">
-							<span class="cf30">735</span>人气 /  
-							<span class="cf30">14</span>评论 / 
-							<span class="cf30">1 </span>收藏  
+							<span class="red01">735</span>人气 /  
+							<span class="red01">14</span>评论 / 
+							<span class="red01">1 </span>收藏  
 						</div>
 					</div>
 				</a>
 			</div>
 	
-			<div class="col-xs-12 col-sm-3 video-item">
-				<a href="images/work_1.jpg" class="fh5co-project-item image-popup to-animate fadeInUp animated">
+			<div class="col-xs-12 col-sm-3 video-item animated fadeInUp">
+				<a href="v-detail.html" class="fh5co-project-item image-popup to-animate fadeInUp animated">
 					<img src="../img/video/04.jpg" alt="Image" class="img-video">
 					<div class="video-text">
 						<h5 class="text-ellipsis" >Cocos Creator教学系列</h5>
 						<p class="text-ellipsis">Cocos Creator官方教学视频。</p>
 						<div class="video-message">
-							<span class="cf30">735</span>人气 /  
-							<span class="cf30">14</span>评论 / 
-							<span class="cf30">1 </span>收藏  
+							<span class="red01">735</span>人气 /  
+							<span class="red01">14</span>评论 / 
+							<span class="red01">1 </span>收藏  
+						</div>
+					</div>
+				</a>
+			</div>
+			
+			<div class="col-xs-12 col-sm-3 video-item animated fadeInUp">
+				<a href="v-detail.html" class="fh5co-project-item image-popup to-animate fadeInUp animated">
+					<img src="../img/video/04.jpg" alt="Image" class="img-video">
+					<div class="video-text">
+						<h5 class="text-ellipsis" >Cocos Creator教学系列</h5>
+						<p class="text-ellipsis">Cocos Creator官方教学视频。</p>
+						<div class="video-message">
+							<span class="red01">735</span>人气 /  
+							<span class="red01">14</span>评论 / 
+							<span class="red01">1 </span>收藏  
+						</div>
+					</div>
+				</a>
+			</div>
+			
+			<div class="col-xs-12 col-sm-3 video-item animated fadeInUp">
+				<a href="v-detail.html" class="fh5co-project-item image-popup to-animate fadeInUp animated">
+					<img src="../img/video/04.jpg" alt="Image" class="img-video">
+					<div class="video-text">
+						<h5 class="text-ellipsis" >Cocos Creator教学系列</h5>
+						<p class="text-ellipsis">Cocos Creator官方教学视频。</p>
+						<div class="video-message">
+							<span class="red01">735</span>人气 /  
+							<span class="red01">14</span>评论 / 
+							<span class="red01">1 </span>收藏  
+						</div>
+					</div>
+				</a>
+			</div>
+			
+			<div class="col-xs-12 col-sm-3 video-item animated fadeInUp">
+				<a href="v-detail.html" class="fh5co-project-item image-popup to-animate fadeInUp animated">
+					<img src="../img/video/04.jpg" alt="Image" class="img-video">
+					<div class="video-text">
+						<h5 class="text-ellipsis" >Cocos Creator教学系列</h5>
+						<p class="text-ellipsis">Cocos Creator官方教学视频。</p>
+						<div class="video-message">
+							<span class="red01">735</span>人气 /  
+							<span class="red01">14</span>评论 / 
+							<span class="red01">1 </span>收藏  
+						</div>
+					</div>
+				</a>
+			</div>
+			
+			<div class="col-xs-12 col-sm-3 video-item animated fadeInUp">
+				<a href="v-detail.html" class="fh5co-project-item image-popup to-animate fadeInUp animated">
+					<img src="../img/video/04.jpg" alt="Image" class="img-video">
+					<div class="video-text">
+						<h5 class="text-ellipsis" >Cocos Creator教学系列</h5>
+						<p class="text-ellipsis">Cocos Creator官方教学视频。</p>
+						<div class="video-message">
+							<span class="red01">735</span>人气 /  
+							<span class="red01">14</span>评论 / 
+							<span class="red01">1 </span>收藏  
 						</div>
 					</div>
 				</a>
 			</div>
 		</div>	
-		
 	</div>
-		
 	</body>
 </html>
