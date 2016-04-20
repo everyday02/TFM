@@ -1,0 +1,40 @@
+{
+  "name": "video-website",
+  "version": "1.0.0",
+  "description": "一个视频分享网站",
+  "main": "gulpfile.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "dependencies": {
+    "gulp-uglify": "^1.5.1",
+    "gulp-minify-css": "^1.2.1",
+    "gulp-htmlmin": "^1.2.0",
+    "gulp-jshint": "^2.0.0"
+  },
+  "devDependencies": {
+    "gulp-concat": "^2.6.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^2.2.0",
+    "jshint": "^2.9.2"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hehangfighting/TFM.git"
+  },
+  "keywords": [
+    "视频",
+    "分享",
+    "it行业"
+  ],
+  "author": "hehang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hehangfighting/TFM/issues"
+  },
+  "homepage": "https://github.com/hehangfighting/TFM#readme"
+}
